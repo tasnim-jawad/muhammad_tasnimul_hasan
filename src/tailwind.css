@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    /* banner  */
+    .shadow_white {
+        box-shadow: 4px 4px 15px #D1D9E6, -4px -4px 15px #ffffff;
+    }
+    .gradient_white {
+        background: linear-gradient(145deg, #e2e8ec, #ffffff);
+        /* background: linear-gradient(145deg, #a5d4f4, #d6caca); */
+        /* background-color: blue; */
+    
+    }
+    .gradient_white_hover_red{
+        background: linear-gradient(145deg, #e2e8ec, #ffffff);
+        /* background-image: linear-gradient(145deg, #a5d4f4, #d6caca); */
+        /* background-color: blue; */
+        
+    }
+    .gradient_white_hover_red:hover {
+        background: linear-gradient(145deg, #ff014f, #d11414);
+        /* background-image:  none;
+        background-color:#d11414; */
+        
+    }
+    .subtitle {
+        @apply text-sm mb-5 uppercase tracking-[2px] text-red_light
+    }
+    .title {
+        font-size: 2.125rem;
+        @apply leading-10 font-bold text-black_h1 mb-3 sm:text-[3.125rem] sm:leading-[3.75rem]
+    }
+    /* banner  */
+    
+    /* experience  */
+    .bg_sticky{
+        background-image: url(../assets/experience/background_image.png);
+        background-size:cover;
+        background-attachment: fixed;
+        @apply bg-center
+    }
+    /* experience  */
+
+    /* client  */
+    .bg_none_to_gradient_white{
+        background: transparent;
+    }
+    
+    .bg_none_to_gradient_white:hover{
+        background: linear-gradient(145deg, #e2e8ec, #ffffff);
+        box-shadow: 4px 4px 15px #D1D9E6, -4px -4px 15px #ffffff;
+    }
+    /* client  */
+
+    /* testimonial  */
+    .quoteImage:after{
+        content: "";
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        left: 246px;
+        top: -18px;
+        /* background: transparent; */
+        background-image: url(../assets/testimonial/quote.png);
+        background-size: cover;
+        /* z-index: -1; */
+        opacity: 0.5;
+        /* background-repeat: no-repeat; */
+        /* background-position: center center; */
+        @apply hidden md:block lg:left-[26.875rem] lg:w-[10.25rem] lg:h-[10.25rem] xl:left-[33.7rem]
+    
+    }
+    /* testimonial  */
+    /* contact  */
+    .overlay{
+        background-color:rgba(77, 155, 214, 0.6);
+        /* background-color:rgba(209, 20, 20, 0.6); */
+    }
+    .bg_image{
+        background-image: url(../assets/contact/man_reading_2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @apply bg-center
+    }
+    
+    .bg_shed{
+        background-color: rgba(245, 245, 246, 0.4);
+    }
+    /* contact  */
+}
